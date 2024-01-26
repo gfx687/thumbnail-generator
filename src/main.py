@@ -9,6 +9,7 @@ font_small = ImageFont.truetype(
     './assets/SourceCodePro-Bold.ttf', size=160)
 font_color = (0, 0, 0)
 
+# check that OC's icon is configured in src/constants.py
 inputs = {
     'class': 'engineer',
     'oc1': 'stubby_em_refire_booster',
@@ -22,8 +23,8 @@ if __name__ == '__main__':
     image = Image.open('./input/input.png')
 
     if image.size != RESOLUTION:
-        print('ERROR: image is of unexpected resolution: {0}. Expected (2560, 1440)'
-              .format(image.size))
+        print(f'ERROR: image is of unexpected resolution: {
+              image.size}. Expected (2560, 1440)')
         sys.exit()
 
     image = add_gradient(image)

@@ -32,4 +32,3 @@ MISSION_TYPES = [
     'Egg Hunt',
     'Refinery'
 ]
-

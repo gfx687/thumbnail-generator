@@ -1,5 +1,5 @@
-from constants import CLASSES, OVERCLOCKS
 from PIL import Image
+from constants import CLASSES, OVERCLOCKS
 
 RESOLUTION = (2560, 1440)
 ICON_SIZE_FRAME = 400
@@ -40,7 +40,7 @@ def add_overclock_icons(image: Image.Image, oc1: str, oc2: str):
 
     oc1_icon = Image.open('./assets/' + OVERCLOCKS[oc1][1])
     oc1_icon = oc1_icon.resize((ICON_SIZE_MOD, ICON_SIZE_MOD),
-                             resample=Image.BOX)
+                               resample=Image.BOX)
 
     oc2_frame = Image.open('./assets/' + OVERCLOCKS[oc2][0])
     oc2_frame = oc2_frame.resize((ICON_SIZE_FRAME, ICON_SIZE_FRAME),
@@ -48,7 +48,7 @@ def add_overclock_icons(image: Image.Image, oc1: str, oc2: str):
 
     oc2_icon = Image.open('./assets/' + OVERCLOCKS[oc2][1])
     oc2_icon = oc2_icon.resize((ICON_SIZE_MOD, ICON_SIZE_MOD),
-                             resample=Image.BOX)
+                               resample=Image.BOX)
 
     image.paste(oc1_frame, (1550, 100), oc1_frame)
     image.paste(oc1_icon,
